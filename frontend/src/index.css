@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: all;
+}
+
+@layer components {
+    .align-element {
+        @apply mx-auto max-w-6xl px-8;
+    }
+
+    .custom-gradient1 {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .custom-gradient2 {
+        background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    }
+
+    .custom-gradient3 {
+        background: repeating-linear-gradient(45deg, #ff6b6b, #ff6b6b 10px, #f06595 10px, #f06595 20px);
+    }
+
+    .custom-gradient4 {
+        background: repeating-linear-gradient(to left, #43cea2, #43cea2 15px, #185a9d 15px, #185a9d 30px);
+    }
+
+    .custom-gradient5 {
+        background: linear-gradient(to bottom, #1a1a2e, #16213e, #e94560, #0f3460);
+    }
+
+    .custom-gradient5-reverse {
+        background: linear-gradient(to top, #1a1a2e, #16213e, #e94560, #0f3460);
+    }
+
+    .custom-gradient6 {
+        background: repeating-linear-gradient(45deg, #121212, #121212 10px, #575757 10px, #dcdcdc 20px);
+    }
+
+    .custom-gradient7 {
+        background: repeating-linear-gradient(to left, #232526, #414345, #a8a8a8, #232526);
+    }
+
+    .custom-gradient8 {
+        background: linear-gradient(to top, #141E30, #243B55, #d3d3d3, #141E30);
+    }
+
+    .custom-gradient9 {
+        background: linear-gradient(to bottom, #1a1a2e, #16213e, #38ef7d, #0f3460);
+    }
+
+    .custom-gradient10 {
+        background: repeating-linear-gradient(45deg, #121212, #121212 10px, #57ff57 10px, #dcdcdc 20px);
+    }
+
+    .custom-gradient11 {
+        background: repeating-linear-gradient(to left, #0f2027, #203a43, #2c7744, #0f2027);
+    }
+
+    .custom-gradient12 {
+        background: linear-gradient(to top, #141E30, #243B55, #4caf50, #141E30);
+    }
+
+    .custom-gradient13 {
+        background: linear-gradient(to right, #2c3e50, #4ca1af, #b8e994);
+    }
+
+    .custom-gradient14 {
+        background: linear-gradient(to bottom, #37474f, #81c784, #e8f5e9);
+    }
+
+    .custom-gradient15 {
+        background: repeating-linear-gradient(45deg, #546e7a, #546e7a 10px, #a5d6a7 10px, #ffffff 20px);
+    }
+
+    .custom-gradient16 {
+        background: linear-gradient(to left, #3e5151, #decba4, #ffffff);
+    }
+
+    .custom-gradient17 {
+        background: linear-gradient(to top, #556270, #4ecdc4, #c7f464);
+    }
+
+
+
+    .hover-glare {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-glare::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(4, 136, 136, 0.267), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+        transition: background-position 0.3s ease-in-out;
+        z-index: -1;
+        -webkit-transition: background-position 0.3s ease-in-out;
+        -moz-transition: background-position 0.3s ease-in-out;
+        -ms-transition: background-position 0.3s ease-in-out;
+        -o-transition: background-position 0.3s ease-in-out;
+}
+
+    .hover-glare:hover::before {
+        background-position: 100% 100%;
+    }
+
+    .animate-slideTopLeft {
+        opacity: 0;
+        transform: translate(-10%, -10%);
+        animation: slideTopLeft 0.4s forwards ease-in-out;
+        -webkit-transform: translate(-10%, -10%);
+        -moz-transform: translate(-10%, -10%);
+        -ms-transform: translate(-10%, -10%);
+        -o-transform: translate(-10%, -10%);
+        -webkit-animation: slideTopLeft 0.4s forwards ease-in-out;
+}
+
+    /* Slide in from Top-Right */
+    .animate-slideTopRight {
+        opacity: 0;
+        transform: translate(10%, -10%);
+        animation: slideTopRight 0.4s forwards ease-in-out;
+    }
+
+    /* Slide in from Bottom-Right */
+    .animate-slideBottomRight {
+        opacity: 0;
+        transform: translate(10%, 10%);
+        animation: slideBottomRight 0.4s forwards ease-in-out;
+    }
+
+    /* Slide in from Bottom-Left */
+    .animate-slideBottomLeft {
+        opacity: 0;
+        transform: translate(-10%, 10%);
+        animation: slideBottomLeft 0.4s forwards ease-in-out;
+    }
+
+    /* Pop In Effect */
+    .animate-popIn {
+        opacity: 0;
+        transform: scale(0.8);
+        animation: popIn 0.3s forwards ease-in-out;
+    }
+
+    /* Slide in from Left */
+    .animate-slideLeft {
+        opacity: 0;
+        transform: translateX(-20%);
+        animation: slideLeft 0.4s forwards ease-in-out;
+    }
+
+    /* Slide in from Right */
+    .animate-slideRight {
+        opacity: 0;
+        transform: translateX(20%);
+        animation: slideRight 0.4s forwards ease-in-out;
+    }
+
+    /* Slide in from Bottom */
+    .animate-slideBottom {
+        opacity: 0;
+        transform: translateY(20%);
+        animation: slideBottom 0.4s forwards ease-in-out;
+    }
+
+    /* Slide in from Top */
+    .animate-slideTop {
+        opacity: 0;
+        transform: translateY(-20%);
+        animation: slideTop 0.4s forwards ease-in-out;
+    }
+
+}
+
+/* Keyframes for Animations */
+@keyframes slideTopLeft {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideTopRight {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideBottomRight {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideBottomLeft {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideBottom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
